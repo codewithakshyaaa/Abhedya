@@ -1,16 +1,63 @@
-# React + Vite
+# 🛡️Abhedya
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![FastAPI](https://img.shields.io/badge/FastAPI-05998b?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
 
-Currently, two official plugins are available:
+A comprehensive, AI-powered cybersecurity assistant designed to simplify threat analysis, provide real-time updates, and streamline incident reporting for non-technical users.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📑 Table of Contents
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Tech Stack](#-tech-stack)
+- [Getting Started](#-getting-started)
+- [API Documentation](#-api-documentation)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Safety Feed:** Aggregates real-time cybersecurity news with AI-powered, layman-friendly summaries.
+*   **Check-it Analyzer:** A robust engine that scans links/text for threats and provides step-by-step remediation guidance.
+*   **Cyber Quest (Gamified):** Learn complex security concepts through simplified, step-by-step interactive lessons.
+*   **FirstAid-PDF Generator:** Converts complex security incidents into formal, professional, and downloadable PDF reports for IT submission.
+*   **Community Shield:** A real-time, peer-to-peer reporting platform to alert the community about active scams.
+
+---
+
+## 🏗 Architecture
+
+The application follows a decoupled full-stack architecture:
+
+- **Frontend:** Provides the UI for incident reporting, threat analysis, and community feed.
+- **Backend (FastAPI):** Acts as the brain, handling AI inference (OpenAI), data validation, and PDF generation.
+- **Service Layer:** Connects to external APIs (VirusTotal, RSS Feeds) and manages persistent storage.
+
+---
+
+## 🛠 Tech Stack
+
+*   **Framework:** FastAPI (Python)
+*   **AI/LLM:** OpenAI GPT-4o / LangChain
+*   **Database:** PostgreSQL / MongoDB
+*   **PDF Generation:** WeasyPrint / ReportLab
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+* Python 3.10+
+* Redis (for background task queuing)
+
+### 📝 API Documentation
+* FastAPI provides interactive API documentation automatically. Once the server is running, visit:
+* Swagger UI: http://localhost:8000/docs
+* ReDoc: http://localhost:8000/redoc
+
+### 🤝 Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Feel free to fork this repository and submit a Pull Request!
+If you found this project useful, please consider giving it a ⭐!
+Built with ❤️ for a safer digital world.
