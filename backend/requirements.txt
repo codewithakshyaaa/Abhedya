@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+pydantic
+groq
+feedparser
+beautifulsoup4
+lxml
+python-dateutil
+python-dotenv
