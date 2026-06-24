@@ -44,19 +44,42 @@ function CheckIt() {
   const [result, setResult]   = useState(null)
 
   const handleAnalyze = async () => {
-    if (!input.trim()) { setError("Please enter a URL or text to analyze."); return }
-    setLoading(true); setError(""); setResult(null)
-    try {
-      const res = await fetch(`${API_BASE}/analyzer/`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ input_type: mode, content: input.trim() }),
-      })
-      if (!res.ok) throw new Error("Analysis failed. Please try again.")
-      setResult(await res.json())
-    } catch (e) { setError(e.message) }
-    finally { setLoading(false) }
+  if (!input.trim()) { 
+    setError("Please enter a URL or text to analyze."); 
+    return; 
   }
+  
+  setLoading(true); 
+  setError(""); 
+  setResult(null);
+
+  try {
+    const payload = { 
+      input_type: mode, 
+      content: input.trim() 
+    };
+
+    const res = await fetch(`${API_BASE}/analyzer/`, {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Accept": "application/json" 
+      },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const errorData = await res.json().catch(() => ({}));
+      throw new Error(errorData.detail || "Analysis failed. Please check your input.");
+    }
+
+    const data = await res.json();
+    setResult(data);
+  } catch (e) { 
+    setError(e.message); 
+  } finally { 
+    setLoading(false); 
+  }
+}
 
   const handleClear = () => { setInput(""); setResult(null); setError("") }
 
