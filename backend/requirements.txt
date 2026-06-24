@@ -9,3 +9,4 @@ beautifulsoup4
 lxml
 python-dateutil
 python-dotenv
+psycopg2-binary
