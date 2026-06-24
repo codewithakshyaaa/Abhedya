@@ -4,7 +4,7 @@ import { HiHome } from "react-icons/hi2";
 import { TbAlertTriangle, TbShieldCheck, TbFlame, TbCopy, TbArrowRight, TbCheck, TbRefresh, TbDownload } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000"
+const API_BASE = "https://abhedya-production.up.railway.app" || "http://localhost:8000"
 
 const ISSUE_TYPES = [
   "Online Banking Fraud",

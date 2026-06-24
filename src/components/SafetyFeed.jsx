@@ -7,7 +7,7 @@ import {
   HiClock, HiArrowTopRightOnSquare, HiChevronUp
 } from "react-icons/hi2"
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:8000"
+const API = "https://abhedya-production.up.railway.app" || "http://localhost:8000"
 
 const INDIAN_STATES = [
   "All States",

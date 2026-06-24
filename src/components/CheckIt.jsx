@@ -4,7 +4,7 @@ import { HiHome } from "react-icons/hi2";
 import { IoShieldCheckmark } from "react-icons/io5";
 import { TbAlertTriangle, TbShieldCheck, TbSkull } from "react-icons/tb";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000"
+const API_BASE ="https://abhedya-production.up.railway.app"  || "http://localhost:8000"
 
 const THREAT_CONFIG = {
   safe: {
